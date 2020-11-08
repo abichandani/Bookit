@@ -1,0 +1,13 @@
+package com.bookit.theatres;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class BookitTheatresServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(BookitTheatresServiceApplication.class, args);
+	}
+
+}
