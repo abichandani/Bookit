@@ -1,0 +1,48 @@
+## OAUTH2 SECURITY DETAILS
+#security:
+#  oauth2:
+#    client:
+#      clientId:
+#      clientSecret:
+#      accessTokenUri:
+#      userAuthorisationUri:
+#      clientAuthenticationScheme:
+#    resource:
+#      userInfoUri:
+#      prefer-token-info:
+
+#timeout issue solution
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 60000
+
+# server-port
+server.port: 3333
+
+# api gateway microservice name
+spring.application.name: ZuulServer
+
+# mapping to other Microservices
+zuul.routes:
+  booking:
+    path: /booking/**
+    strip-prefix: false
+    service-id: BookingMS
+
+  movies:
+    path: /movies/**
+    strip-prefix: false
+    service-id: MoviesMS
+  
+  shows:
+    path: /shows/**
+    strip-prefix: false
+    service-id: ShowsMS
+
+  theatres:
+    path: /theatres/**
+    strip-prefix: false
+    service-id: ThreatresMS
+
+  users:
+    path: /users/**
+    strip-prefix: false
+    service-id: UsersMS

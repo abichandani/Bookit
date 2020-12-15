@@ -1,0 +1,2 @@
+# cloud-config server path
+spring.cloud.config.uri: http://localhost:8000
