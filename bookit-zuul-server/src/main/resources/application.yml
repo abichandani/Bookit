@@ -46,3 +46,9 @@ zuul.routes:
     path: /users/**
     strip-prefix: false
     service-id: UsersMS
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:2222/eureka
